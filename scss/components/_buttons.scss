@@ -1,0 +1,50 @@
+// Button Styles
+.btn {
+  @include heading-font;
+  font-weight: 700;
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken($primary, 7.5%) !important;
+    border-color: darken($primary, 7.5%) !important;
+    color: white;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem #33a018 !important;
+  }
+}
+
+.btn-outline-primary {
+  border-color: $primary;
+  color: $primary;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $primary;
+    border-color: darken($primary, 7.5%) !important;
+    color: white;
+  }
+  &:active,
+  &:focus {
+    background-color: $primary;
+    box-shadow: 0 0 0 0.2rem #33a018 !important;
+  }
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active,
+  .show>&.dropdown-toggle {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+}

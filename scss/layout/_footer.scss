@@ -1,0 +1,42 @@
+// Styling for the footer
+.footer {
+  a {
+    color: $gray-200;
+    &:hover,
+    &:active {
+      color: $gray-400;
+    }
+  }
+    .footer-logo img {
+        height: 100px;
+    }
+    padding: 25px 0;
+    background-color: $gray-1000;
+    color: $gray-200;
+  span.copyright {
+    font-size: 90%;
+    text-transform: none;
+    @include heading-font;
+  }
+  .footer-contact {
+    text-align: right;
+  }
+  ul.quicklinks {
+    font-size: 90%;
+    line-height: 30px;
+    margin-bottom: 0;
+    text-transform: none;
+    @include heading-font;
+  }
+}
+@media(max-width:768px) {
+  .footer {
+    text-align: center;
+    .footer-contact {
+      text-align: center;
+    }
+    .footer-hide-md {
+      display: none;
+    }
+  }
+}
